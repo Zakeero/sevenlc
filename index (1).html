@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEVEN LC — Ingliz tili markazi</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Display + Body juftligi -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== STICKY NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-seven">SEVEN</span><span class="logo-lc">LC</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Bosh sahifa</a></li>
+        <li><a href="#features">Ustunliklar</a></li>
+        <li><a href="#form">Ro'yxat</a></li>
+      </ul>
+      <a href="#form" class="nav-cta">Boshlash →</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+
+    <!-- Fon dekorativ elementlari -->
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="grid-lines"></div>
+
+    <div class="hero-inner">
+
+      <!-- ===== CHAP TOMON: Kontent ===== -->
+      <div class="hero-left">
+
+        <!-- Logo -->
+        <div class="brand-badge">
+          <span class="badge-dot"></span>
+          <span>Rasmiy ta'lim markazi • Toshkent</span>
+        </div>
+
+        <!-- Asosiy sarlavha -->
+        <h1 class="headline">
+          Ingliz tilini<br/>
+          <span class="headline-accent">natija bilan</span><br/>
+          o'rganing!
+        </h1>
+
+        <!-- Kichik tavsif -->
+        <p class="subtitle">
+          Zamonaviy metodikalar, tajribali ustozlar va kuchli speaking muhiti orqali
+          ingliz tilini tez va samarali o'rganing.
+        </p>
+
+        <!-- Foyda bandlari -->
+        <ul class="benefits">
+          <li>
+            <span class="benefit-icon">✦</span>
+            <span>Har bir darsda real suhbat amaliyoti — speaking birinchi kun</span>
+          </li>
+          <li>
+            <span class="benefit-icon">✦</span>
+            <span>Shaxsiy nazorat tizimi — har bir o'quvchiga alohida e'tibor</span>
+          </li>
+        </ul>
+
+        <!-- Statistika kartalar -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-number">500<span class="stat-plus">+</span></span>
+            <span class="stat-label">o'quvchi</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">90<span class="stat-plus">%</span></span>
+            <span class="stat-label">natija</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">7<span class="stat-plus">+</span></span>
+            <span class="stat-label">yillik tajriba</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== O'NG TOMON: Lead forma ===== -->
+      <div class="hero-right">
+        <div class="form-card" id="form">
+
+          <!-- Forma sarlavhasi -->
+          <div class="form-header">
+            <div class="form-badge">🎯 Bepul konsultatsiya</div>
+            <h2 class="form-title">
+              Darslarga yozilish uchun<br/>hoziroq ro'yxatdan o'ting
+            </h2>
+            <p class="form-subtitle">30 soniyada to'ldiring — biz qo'ng'iroq qilamiz</p>
+          </div>
+
+          <!-- Forma -->
+          <div class="lead-form" id="leadForm">
+
+            <div class="field-group">
+              <label class="field-label">
+                <span class="label-icon">👤</span> Ismingiz
+              </label>
+              <input
+                type="text"
+                id="nameInput"
+                class="field-input"
+                placeholder="Masalan: Alibek"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">
+                <span class="label-icon">📱</span> Telefon raqam
+              </label>
+              <input
+                type="tel"
+                id="phoneInput"
+                class="field-input"
+                placeholder="+998 __ ___ __ __"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">
+                <span class="label-icon">🎂</span> Yoshingiz
+              </label>
+              <input
+                type="number"
+                id="ageInput"
+                class="field-input"
+                placeholder="Masalan: 22"
+                min="5"
+                max="70"
+              />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">
+                <span class="label-icon">📍</span> Shaharni tanlang
+              </label>
+              <div class="select-wrapper">
+                <select id="citySelect" class="field-input field-select">
+                  <option value="" disabled selected>Shaharni tanlang</option>
+                  <option value="toshkent">Toshkent</option>
+                  <option value="samarkand">Samarqand</option>
+                  <option value="buxoro">Buxoro</option>
+                  <option value="namangan">Namangan</option>
+                  <option value="andijon">Andijon</option>
+                  <option value="fargona">Farg'ona</option>
+                  <option value="qarshi">Qarshi</option>
+                  <option value="nukus">Nukus</option>
+                  <option value="other">Boshqa shahar</option>
+                </select>
+                <span class="select-arrow">▾</span>
+              </div>
+            </div>
+
+            <!-- Yuborish tugmasi -->
+            <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+              <span class="btn-text">📞 Menga qo'ng'iroq qiling!</span>
+              <span class="btn-shine"></span>
+            </button>
+
+            <!-- Ishonch belgisi -->
+            <p class="trust-note">
+              🔒 Ma'lumotlaringiz xavfsiz. Spam yo'q — faqat bir qo'ng'iroq.
+            </p>
+
+          </div>
+
+          <!-- Muvaffaqiyat xabari (JavaScript tomonidan ko'rsatiladi) -->
+          <div class="success-message" id="successMessage">
+            <div class="success-icon">🎉</div>
+            <h3 class="success-title">Tabriklaymiz!</h3>
+            <p class="success-text">
+              Siz muvaffaqiyatli ro'yxatdan o'tdingiz.<br/>
+              Tez orada mutaxassisimiz siz bilan bog'lanadi!
+            </p>
+            <div class="success-timer">
+              <span class="timer-dot"></span>
+              Odatda <strong>15 daqiqa</strong> ichida qo'ng'iroq qilamiz
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /hero-right -->
+
+    </div>
+    <!-- /hero-inner -->
+
+  </section>
+  <!-- /hero -->
+
+  <!-- ===== FEATURE BAR ===== -->
+  <section class="feature-bar" id="features">
+    <div class="feature-bar-inner">
+
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-content">
+          <span class="feature-title">Kuchli ustozlar</span>
+          <span class="feature-desc">IELTS 8.0+ sertifikatlangan o'qituvchilar</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🗣️</div>
+        <div class="feature-content">
+          <span class="feature-title">Speaking muhit</span>
+          <span class="feature-desc">Har darsda jonli suhbat amaliyoti</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-content">
+          <span class="feature-title">Nazorat tizimi</span>
+          <span class="feature-desc">Haftalik test va shaxsiy tahlil</span>
+        </div>
+      </div>
+
+      <div class="feature-divider"></div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🕐</div>
+        <div class="feature-content">
+          <span class="feature-title">Qulay grafik</span>
+          <span class="feature-desc">Ertalab, kunduz va kechki guruhlar</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /feature-bar -->
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <!-- Telegram tugmasi -->
+  <a
+    href="https://t.me/sevenlc"
+    target="_blank"
+    class="float-btn float-telegram"
+    title="Telegram orqali yozing"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+    </svg>
+    <span class="float-label">Telegram</span>
+  </a>
+
+  <!-- Telefon tugmasi -->
+  <a
+    href="tel:+998901234567"
+    class="float-btn float-phone"
+    title="Qo'ng'iroq qiling"
+  >
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    <span class="float-label">Qo'ng'iroq</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
