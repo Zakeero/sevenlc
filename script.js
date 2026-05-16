@@ -19,8 +19,8 @@ window.addEventListener('scroll', () => {
 });
 
 
-const TOKEN = "BOT_TOKEN";
-const CHAT_ID = "CHAT_ID";
+const TOKEN = "1843165785:AAFWdcKM8t-bS-E0itVylbZzcID2bu9cWLg";
+const CHAT_ID = "1534900074";
 
 const form = document.getElementById("leadForm");
 
