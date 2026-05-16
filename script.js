@@ -8,8 +8,8 @@
    BOT_TOKEN: Get from @BotFather on Telegram
    CHAT_ID:   Get from @userinfobot or your channel/group ID
    ======================================= */
-const BOT_TOKEN = "YOUR_BOT_TOKEN_HERE";
-const CHAT_ID   = "YOUR_CHAT_ID_HERE";
+const BOT_TOKEN = "8950046170:AAHujE3DaKaLimU66MSGtvpULoUUGrzquoY";
+const CHAT_ID   = "1534900074";
 
 /* ============================================
    1. NAVBAR — Scroll effect
