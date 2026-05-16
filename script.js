@@ -19,6 +19,45 @@ window.addEventListener('scroll', () => {
 });
 
 
+const TOKEN = "BOT_TOKEN";
+const CHAT_ID = "CHAT_ID";
+
+const form = document.getElementById("leadForm");
+
+form.addEventListener("submit", function(e) {
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+
+const message = `
+🔥 Yangi LID!
+
+👤 Ism: ${name}
+📞 Telefon: ${phone}
+`;
+
+fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+chat_id: CHAT_ID,
+text: message
+})
+})
+.then(() => {
+alert("So'rovingiz yuborildi!");
+form.reset();
+})
+.catch(() => {
+alert("Xatolik yuz berdi!");
+});
+
+});
+
+
 // ===== TELEFON RAQAM FORMATLASH =====
 // Foydalanuvchi telefon raqam kiritayotganda avtomatik formatlaydi
 
