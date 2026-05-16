@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SEVEN LC — IELTS, General English va Speaking kurslari orqali ingliz tilini tez va natija bilan o'rganing. Bepul konsultatsiya oling!" />
-  <meta name="keywords" content="ingliz tili kurslari, IELTS tayyorgarlik, Speaking club, English learning Uzbekistan" />
-  <meta property="og:title" content="SEVEN LC — Ingliz tilini natija bilan o'rganing" />
-  <meta property="og:description" content="500+ o'quvchi, 90% natija, 7+ yillik tajriba. Bepul konsultatsiya oling!" />
-  <title>SEVEN LC — Ingliz tilini natija bilan o'rganing</title>
+  <meta name="description" content="SEVEN LC — Ingliz, Rus, Nemis, Turk, Xitoy va Koreys tillarini professional darajada o'rganing. Bepul konsultatsiya oling!" />
+  <meta name="keywords" content="chet til kurslari, ingliz tili, rus tili, nemis tili, IELTS, xorijiy til Toshkent" />
+  <meta property="og:title" content="SEVEN LC — Xorijiy tillarni professional darajada o'rganing" />
+  <meta property="og:description" content="500+ o'quvchi, 90% natija, 7+ yillik tajriba. 6 xorijiy til. Bepul konsultatsiya oling!" />
+  <title>SEVEN LC — Xorijiy tillarni professional darajada o'rganing</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,48 +21,106 @@
   <!-- ========== STICKY NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <!-- Logo -->
+
+      <!-- Logo: uses logo.png, falls back to text if image missing -->
       <a href="#" class="nav-logo">
-        <span class="logo-seven">SEVEN</span><span class="logo-lc">LC</span>
+        <img
+          src="logo.png"
+          alt="SEVEN LC"
+          class="logo-img"
+          onerror="this.style.display='none';document.getElementById('logo-text').style.display='flex';"
+        />
+        <span id="logo-text" class="logo-text-fallback" style="display:none;">
+          <span class="logo-seven">SEVEN</span><span class="logo-lc">LC</span>
+        </span>
       </a>
 
-      <!-- Nav Actions -->
+      <!-- Nav right actions -->
       <div class="nav-actions">
         <a href="https://t.me/sevenlc" target="_blank" class="btn-telegram-nav">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
           Telegram
         </a>
         <a href="tel:+998901234567" class="btn-phone-nav">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           +998 90 123 45 67
         </a>
       </div>
     </div>
   </nav>
 
+  <!-- ========== FLAGS MARQUEE RIBBON ========== -->
+  <!-- Runs right below the navbar, always visible -->
+  <div class="flags-ribbon">
+    <div class="flags-track">
+      <!-- Set 1 -->
+      <div class="flag-item"><span class="flag-emoji">🇬🇧</span><span class="flag-name">Ingliz tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇷🇺</span><span class="flag-name">Rus tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇩🇪</span><span class="flag-name">Nemis tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇹🇷</span><span class="flag-name">Turk tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇨🇳</span><span class="flag-name">Xitoy tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇰🇷</span><span class="flag-name">Koreys tili</span></div>
+      <div class="flag-sep">·</div>
+      <!-- Set 2 (seamless duplicate) -->
+      <div class="flag-item"><span class="flag-emoji">🇬🇧</span><span class="flag-name">Ingliz tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇷🇺</span><span class="flag-name">Rus tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇩🇪</span><span class="flag-name">Nemis tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇹🇷</span><span class="flag-name">Turk tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇨🇳</span><span class="flag-name">Xitoy tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇰🇷</span><span class="flag-name">Koreys tili</span></div>
+      <div class="flag-sep">·</div>
+      <!-- Set 3 -->
+      <div class="flag-item"><span class="flag-emoji">🇬🇧</span><span class="flag-name">Ingliz tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇷🇺</span><span class="flag-name">Rus tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇩🇪</span><span class="flag-name">Nemis tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇹🇷</span><span class="flag-name">Turk tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇨🇳</span><span class="flag-name">Xitoy tili</span></div>
+      <div class="flag-sep">·</div>
+      <div class="flag-item"><span class="flag-emoji">🇰🇷</span><span class="flag-name">Koreys tili</span></div>
+      <div class="flag-sep">·</div>
+    </div>
+  </div>
+
   <!-- ========== HERO SECTION ========== -->
   <section class="hero" id="home">
-    <!-- Background decorations -->
+    <!-- Decorative floating orbs -->
     <div class="hero-bg-orb orb-1"></div>
     <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+    <!-- Subtle dot grid -->
     <div class="hero-grid"></div>
 
     <div class="hero-container">
-      <!-- Left: Headline + CTA -->
+
+      <!-- LEFT: headline + CTA -->
       <div class="hero-left reveal">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Yangi guruhlar boshlandi
+          6 ta xorijiy til &nbsp;·&nbsp; Yangi guruhlar boshlandi
         </div>
 
         <h1 class="hero-headline">
-          Ingliz tilini<br/>
-          <span class="headline-gradient">natija bilan</span><br/>
-          o'rganing
+          Xorijiy tillarni<br/>
+          <span class="headline-gradient">professional</span><br/>
+          darajada o'rganing
         </h1>
 
         <p class="hero-sub">
-          IELTS, General English va Speaking kurslari orqali qisqa muddatda ingliz tilida erkin gapirishni boshlang.
+          Ingliz, Rus, Nemis, Turk, Xitoy va Koreys tillarini sertifikatlangan ustozlar bilan qisqa muddatda o'rganing. Maqsadingizga erishing — SEVEN LC bilan.
         </p>
 
         <div class="hero-btns">
@@ -71,7 +129,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="https://t.me/sevenlc" target="_blank" class="btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
             Telegram orqali yozish
           </a>
         </div>
@@ -89,13 +147,18 @@
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
+            <span class="trust-num">6</span>
+            <span class="trust-label">Til yo'nalishi</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
             <span class="trust-num">7+</span>
             <span class="trust-label">Yillik tajriba</span>
           </div>
         </div>
       </div>
 
-      <!-- Right: Lead Form -->
+      <!-- RIGHT: lead gen form -->
       <div class="hero-right reveal reveal-delay" id="contact-form">
         <div class="form-card">
           <div class="form-card-header">
@@ -122,18 +185,20 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Kursni tanlang</label>
+              <label class="form-label">Tilni tanlang</label>
               <div class="select-wrapper">
                 <select id="courseSelect" class="form-input form-select" required>
-                  <option value="">— Kursni tanlang —</option>
-                  <option value="Beginner English">Beginner English</option>
-                  <option value="IELTS Preparation">IELTS Preparation</option>
-                  <option value="Speaking Club">Speaking Club</option>
-                  <option value="General English">General English</option>
+                  <option value="">— Tilni tanlang —</option>
+                  <option value="Ingliz tili">🇬🇧 Ingliz tili</option>
+                  <option value="Rus tili">🇷🇺 Rus tili</option>
+                  <option value="Nemis tili">🇩🇪 Nemis tili</option>
+                  <option value="Turk tili">🇹🇷 Turk tili</option>
+                  <option value="Xitoy tili">🇨🇳 Xitoy tili</option>
+                  <option value="Koreys tili">🇰🇷 Koreys tili</option>
                 </select>
                 <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
               </div>
-              <span class="input-error" id="courseError">Iltimos, kursni tanlang</span>
+              <span class="input-error" id="courseError">Iltimos, tilni tanlang</span>
             </div>
 
             <button type="submit" class="btn-form" id="submitBtn">
@@ -146,7 +211,7 @@
             </button>
           </form>
 
-          <!-- Success message -->
+          <!-- Success message (shown after submit) -->
           <div class="success-msg" id="successMsg" style="display:none;">
             <div class="success-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -156,7 +221,7 @@
           </div>
 
           <div class="form-guarantee">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Ma'lumotlaringiz xavfsiz va maxfiy saqlanadi
           </div>
         </div>
@@ -174,40 +239,36 @@
       </div>
 
       <div class="features-grid">
-        <!-- Feature 1 -->
         <div class="feature-card reveal">
           <div class="feature-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <h3 class="feature-title">Kuchli ustozlar</h3>
-          <p class="feature-desc">IELTS 8.0+ ball olgan sertifikatlangan ustozlar bilan o'qing. Har bir ustoz — amaliy tajribaga ega mutaxassis.</p>
+          <p class="feature-desc">Har bir til bo'yicha maxsus sertifikatlangan, xalqaro darajada tayyorlangan professional ustozlar.</p>
         </div>
 
-        <!-- Feature 2 -->
         <div class="feature-card reveal">
           <div class="feature-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </div>
           <h3 class="feature-title">Speaking muhit</h3>
-          <p class="feature-desc">Real suhbat muhiti. Har dars ingliz tilida gaplashing, xatolardan qo'rqmasdan o'sib boring.</p>
+          <p class="feature-desc">Real suhbat muhiti. Har dars o'rganilayotgan tilda so'zlashing, xatolardan qo'rqmasdan rivojlaning.</p>
         </div>
 
-        <!-- Feature 3 -->
         <div class="feature-card reveal">
           <div class="feature-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <h3 class="feature-title">Nazorat tizimi</h3>
           <p class="feature-desc">Haftalik testlar, oylik hisobotlar va individual progress tracking bilan natijangizni kuzating.</p>
         </div>
 
-        <!-- Feature 4 -->
         <div class="feature-card reveal">
           <div class="feature-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <h3 class="feature-title">Qulay grafik</h3>
-          <p class="feature-desc">Ertalabki, kunduzi va kechki guruhlar mavjud. O'zingizga qulay vaqtda o'qing, hayotingizni buzmasdan.</p>
+          <p class="feature-desc">Ertalabki, kunduzi va kechki guruhlar. O'zingizga qulay vaqtda o'qing, hayotingizni buzmasdan.</p>
         </div>
       </div>
     </div>
@@ -218,64 +279,109 @@
     <div class="section-container">
       <div class="section-header reveal">
         <span class="section-tag">Kurslarimiz</span>
-        <h2 class="section-title">O'zingizga mos kursni tanlang</h2>
-        <p class="section-sub">Har bir daraja va maqsad uchun maxsus ishlab chiqilgan dasturlar</p>
+        <h2 class="section-title">6 ta xorijiy til yo'nalishi</h2>
+        <p class="section-sub">Har bir maqsad va daraja uchun maxsus ishlab chiqilgan professional dasturlar</p>
       </div>
 
       <div class="courses-grid">
-        <!-- Course 1 -->
+
+        <!-- English -->
         <div class="course-card reveal">
-          <div class="course-badge">Boshlang'ich</div>
-          <div class="course-emoji">🌱</div>
-          <h3 class="course-name">Beginner English</h3>
-          <p class="course-desc">Ingliz tilini mutlaqo noldan boshlaydiganlar uchun. Alifbo, grammatika va oddiy suhbat ko'nikmalarini o'rganing.</p>
-          <ul class="course-features">
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grammatika asoslari</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kundalik suhbat</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Listening va Reading</li>
-          </ul>
-          <div class="course-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            3 oylik kurs
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇬🇧</span>
+            <span class="course-badge">IELTS · General · Business</span>
           </div>
+          <h3 class="course-name">Ingliz tili</h3>
+          <p class="course-desc">IELTS 7.0+ band, erkin muloqot va professional ingliz tili. Boshlang'ichdan yuqori darajagacha to'liq dastur.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> IELTS tayyorgarlik</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Speaking Club</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Business English</li>
+          </ul>
           <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
         </div>
 
-        <!-- Course 2 — Featured -->
+        <!-- Russian -->
+        <div class="course-card reveal">
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇷🇺</span>
+            <span class="course-badge">A1 → C1 · TRKI</span>
+          </div>
+          <h3 class="course-name">Rus tili</h3>
+          <p class="course-desc">Rus tilini noldan yoki mavjud bilim asosida chuqurlashtiring. Rossiya universitetlari uchun tayyorgarlik.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grammatika va so'zlashuv</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> TRKI imtihoniga tayyorlov</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Amaliy muloqot</li>
+          </ul>
+          <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
+        </div>
+
+        <!-- German — featured -->
         <div class="course-card course-featured reveal">
-          <div class="course-badge badge-hot">🔥 Mashhur</div>
-          <div class="course-emoji">🎯</div>
-          <h3 class="course-name">IELTS Preparation</h3>
-          <p class="course-desc">IELTS 6.0–8.0 band olishni maqsad qilganlar uchun. Listening, Reading, Writing va Speaking — to'liq tayyorgarlik.</p>
-          <ul class="course-features">
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mock test har hafta</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Individual feedback</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kafolatlangan natija</li>
-          </ul>
-          <div class="course-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            4 oylik kurs
+          <div class="course-top-badge">🔥 Eng mashhur</div>
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇩🇪</span>
+            <span class="course-badge">Goethe · TestDaF</span>
           </div>
+          <h3 class="course-name">Nemis tili</h3>
+          <p class="course-desc">Germaniyada o'qish va ishlash uchun zarur Nemis tilini o'rganing. Goethe sertifikati kafolatlangan.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Goethe sertifikati</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> TestDaF tayyorgarlik</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Amaliy muloqot</li>
+          </ul>
           <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
         </div>
 
-        <!-- Course 3 -->
+        <!-- Turkish -->
         <div class="course-card reveal">
-          <div class="course-badge">Amaliy</div>
-          <div class="course-emoji">🗣️</div>
-          <h3 class="course-name">Speaking Club</h3>
-          <p class="course-desc">Inglizcha gapirish qobiliyatini oshirish uchun maxsus klub. Native-like talaffuz va erkin muloqot ko'nikmasi.</p>
-          <ul class="course-features">
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real suhbat mashqlari</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pronunciation coaching</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kichik guruhlar</li>
-          </ul>
-          <div class="course-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            2 oylik kurs
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇹🇷</span>
+            <span class="course-badge">A1 → B2 · TÖMER</span>
           </div>
+          <h3 class="course-name">Turk tili</h3>
+          <p class="course-desc">Turk tilini o'rganib, Turk universitetlariga hujjat toping yoki biznes aloqalar o'rnating.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> So'zlashuv kursi</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Grammatika asoslari</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> TÖMER imtihoni</li>
+          </ul>
           <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
         </div>
+
+        <!-- Chinese -->
+        <div class="course-card reveal">
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇨🇳</span>
+            <span class="course-badge">HSK 1–6</span>
+          </div>
+          <h3 class="course-name">Xitoy tili</h3>
+          <p class="course-desc">Mandarin Xitoy tilini pinyin va ierogliflardan boshlang. HSK imtihoniga professional tayyorgarlik.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> HSK 1–6 tayyorgarlik</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pinyin va talaffuz</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ierogliflar yozuvi</li>
+          </ul>
+          <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
+        </div>
+
+        <!-- Korean -->
+        <div class="course-card reveal">
+          <div class="course-flag-wrap">
+            <span class="course-flag-icon">🇰🇷</span>
+            <span class="course-badge">TOPIK I · II</span>
+          </div>
+          <h3 class="course-name">Koreys tili</h3>
+          <p class="course-desc">Hanguldan boshlab TOPIK imtihonigacha. Koreya madaniyati, K-drama va biznes muhitida erkin muloqot.</p>
+          <ul class="course-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> TOPIK tayyorgarlik</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Hangul yozuvi</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Muloqot mashqlari</li>
+          </ul>
+          <a href="#contact-form" class="btn-course">Ro'yxatdan o'tish</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -285,9 +391,9 @@
     <div class="stats-bg-orb"></div>
     <div class="section-container">
       <div class="section-header reveal">
-        <span class="section-tag">Bizning natijalar</span>
+        <span class="section-tag" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.4);color:#fff;">Bizning natijalar</span>
         <h2 class="section-title" style="color:#fff;">Raqamlarda muvaffaqiyat</h2>
-        <p class="section-sub" style="color:rgba(255,255,255,0.6);">SEVEN LC da o'qigan o'quvchilarimizning real natijalari</p>
+        <p class="section-sub" style="color:rgba(255,255,255,0.72);">SEVEN LC da o'qigan o'quvchilarimizning real natijalari</p>
       </div>
 
       <div class="stats-grid">
@@ -300,6 +406,11 @@
           <span class="stat-number" data-target="90">0</span>
           <span class="stat-plus">%</span>
           <p class="stat-label">Maqsadga erishgan o'quvchilar</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-plus"></span>
+          <p class="stat-label">Xorijiy til yo'nalishi</p>
         </div>
         <div class="stat-card reveal">
           <span class="stat-number" data-target="7">0</span>
@@ -316,48 +427,47 @@
       <div class="section-header reveal">
         <span class="section-tag">O'quvchilar fikri</span>
         <h2 class="section-title">Ular nima deydi?</h2>
-        <p class="section-sub">Real o'quvchilarimizning tajribalari</p>
+        <p class="section-sub">Real o'quvchilarimizning hayotiy tajribalari</p>
       </div>
 
       <div class="testimonials-grid">
-        <!-- Testimonial 1 -->
+
         <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"SEVEN LC da IELTS kursidan o'tib, 7.0 band oldim! Ustozlar juda professional va har bir dars amaliy bo'ladi. Bu kurs mening hayotimni o'zgartirdi — hozir chet elda o'qiyapman!"</p>
+          <p class="testimonial-text">"SEVEN LC da Ingliz tili kursini tugatib, IELTS 7.0 band oldim! Ustozlar juda professional — har bir dars amaliy va samarali. Bu kurs mening hayotimni o'zgartirdi, hozir chet elda o'qiyapman!"</p>
           <div class="testimonial-author">
             <div class="avatar avatar-1">ZN</div>
             <div>
               <span class="author-name">Zulfiya Nazarova</span>
-              <span class="author-tag">IELTS 7.0 — Toshkent davlat universiteti</span>
+              <span class="author-tag">🇬🇧 IELTS 7.0 — Toshkent davlat universiteti</span>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
         <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Men ingliz tilini mutlaqo bilmasdim. 3 oy ichida erkin gapirishni boshlagan. Speaking Club — eng yaxshi qaror. Endi ish joyida inglizcha muloqot qilaman!"</p>
+          <p class="testimonial-text">"Koreys tili kursiga kirdim, 4 oy ichida TOPIK II sertifikatini oldim. Ustozlar juda sabr-toqatli va har bir so'zni tushuntirib beradi. Endi Koreyadagi universitetga hujjat topshirdim!"</p>
           <div class="testimonial-author">
             <div class="avatar avatar-2">JM</div>
             <div>
               <span class="author-name">Jasurbek Mirzayev</span>
-              <span class="author-tag">Speaking Club — IT muhandisi</span>
+              <span class="author-tag">🇰🇷 TOPIK II — Koreya Universiteti</span>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
         <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"SEVEN LC dagi o'quv muhiti juda qulay. Ustozlar har bir o'quvchiga alohida yondashadi. Beginner kursdan boshlab, endi IELTS ga tayyorlanmoqdaman. Tavsiya qilaman!"</p>
+          <p class="testimonial-text">"Nemis tili kursida Goethe B1 sertifikatini oldim. SEVEN LC ning o'quv muhiti va ustozlari ajoyib. Hozir Germaniyada o'qish uchun viza jarayonidaman — barchasiga tavsiya qilaman!"</p>
           <div class="testimonial-author">
             <div class="avatar avatar-3">MH</div>
             <div>
               <span class="author-name">Mohira Hamidova</span>
-              <span class="author-tag">Beginner → IELTS — talaba</span>
+              <span class="author-tag">🇩🇪 Goethe B1 — Germania universiteti</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -367,16 +477,17 @@
     <div class="cta-bg-orb"></div>
     <div class="section-container">
       <div class="cta-content reveal">
-        <span class="section-tag">Hoziroq boshlang</span>
-        <h2 class="cta-headline">Ingliz tilini bugundan boshlang</h2>
-        <p class="cta-sub">Hoziroq ro'yxatdan o'ting va bepul konsultatsiya oling. Yangi hayot — bir qadam naridadir.</p>
+        <span class="section-tag" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.4);color:#fff;">Hoziroq boshlang</span>
+        <h2 class="cta-headline">Xorijiy tilni bugundan boshlang</h2>
+        <p class="cta-sub">Hoziroq ro'yxatdan o'ting va bepul konsultatsiya oling.<br/>Yangi hayot — bir qadam naridadir.</p>
+        <div class="cta-flags">🇬🇧 &nbsp; 🇷🇺 &nbsp; 🇩🇪 &nbsp; 🇹🇷 &nbsp; 🇨🇳 &nbsp; 🇰🇷</div>
         <div class="cta-btns">
-          <a href="#contact-form" class="btn-primary btn-large">
+          <a href="#contact-form" class="btn-primary btn-large btn-white">
             <span>Ariza qoldirish</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="tel:+998901234567" class="btn-outline-white">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Qo'ng'iroq qiling
           </a>
         </div>
@@ -388,31 +499,44 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
+
         <div class="footer-brand">
-          <a href="#" class="nav-logo">
-            <span class="logo-seven">SEVEN</span><span class="logo-lc">LC</span>
+          <!-- Footer logo -->
+          <a href="#" class="footer-logo-link">
+            <img
+              src="logo.png"
+              alt="SEVEN LC"
+              class="logo-img logo-img-footer"
+              onerror="this.style.display='none';document.getElementById('footer-logo-text').style.display='flex';"
+            />
+            <span id="footer-logo-text" class="logo-text-fallback" style="display:none;">
+              <span class="logo-seven">SEVEN</span><span class="logo-lc">LC</span>
+            </span>
           </a>
-          <p class="footer-tagline">Ingliz tilini natija bilan o'rganing. Kelajagingiz shu yerdan boshlanadi.</p>
+          <p class="footer-tagline">6 ta xorijiy tilni natija bilan o'rganing. Kelajagingiz shu yerdan boshlanadi.</p>
+          <div class="footer-flags">🇬🇧 🇷🇺 🇩🇪 🇹🇷 🇨🇳 🇰🇷</div>
           <div class="footer-socials">
             <a href="https://t.me/sevenlc" target="_blank" class="social-btn" aria-label="Telegram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
             </a>
             <a href="https://instagram.com/sevenlc" target="_blank" class="social-btn" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
             <a href="tel:+998901234567" class="social-btn" aria-label="Phone">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             </a>
           </div>
         </div>
 
         <div class="footer-links-col">
-          <h4 class="footer-col-title">Kurslar</h4>
+          <h4 class="footer-col-title">Til kurslari</h4>
           <ul class="footer-links">
-            <li><a href="#courses">Beginner English</a></li>
-            <li><a href="#courses">IELTS Preparation</a></li>
-            <li><a href="#courses">Speaking Club</a></li>
-            <li><a href="#courses">General English</a></li>
+            <li><a href="#courses">🇬🇧 Ingliz tili</a></li>
+            <li><a href="#courses">🇷🇺 Rus tili</a></li>
+            <li><a href="#courses">🇩🇪 Nemis tili</a></li>
+            <li><a href="#courses">🇹🇷 Turk tili</a></li>
+            <li><a href="#courses">🇨🇳 Xitoy tili</a></li>
+            <li><a href="#courses">🇰🇷 Koreys tili</a></li>
           </ul>
         </div>
 
@@ -420,28 +544,29 @@
           <h4 class="footer-col-title">Aloqa</h4>
           <ul class="footer-links">
             <li><a href="tel:+998901234567">+998 90 123 45 67</a></li>
-            <li><a href="https://t.me/sevenlc" target="_blank">@sevenlc</a></li>
-            <li><a href="https://instagram.com/sevenlc" target="_blank">@sevenlc</a></li>
-            <li><span style="color:rgba(255,255,255,0.5);">Toshkent, Chilonzor tumani</span></li>
+            <li><a href="https://t.me/sevenlc" target="_blank">Telegram: @sevenlc</a></li>
+            <li><a href="https://instagram.com/sevenlc" target="_blank">Instagram: @sevenlc</a></li>
+            <li><span class="footer-address">📍 Toshkent, Chilonzor tumani</span></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom">
         <p>© 2024 SEVEN LC. Barcha huquqlar himoyalangan.</p>
-        <p style="color:rgba(255,255,255,0.35);font-size:0.8rem;">Ingliz tilini o'rganish — eng yaxshi investitsiya</p>
+        <p class="footer-bottom-sub">Xorijiy tilni o'rganish — eng yaxshi investitsiya</p>
       </div>
     </div>
   </footer>
 
   <!-- ========== FLOATING BUTTONS ========== -->
   <a href="https://t.me/sevenlc" target="_blank" class="float-btn float-tg" aria-label="Telegram">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.64-.203-.657-.64.136-.954l11.57-4.461c.537-.194 1.006.131.828.943z"/></svg>
     <span class="float-label">Telegram</span>
   </a>
 
   <a href="tel:+998901234567" class="float-btn float-phone" aria-label="Qo'ng'iroq">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
     <span class="float-label">Qo'ng'iroq</span>
   </a>
 
